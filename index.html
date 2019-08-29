@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercicio 29 carrinho de compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="mt-4" method="post">
+        <div class="row ">
+            <div class="col-md-12">
+              <label>Produto</label>
+              <input type="text" name="product" value="" id="product" class="form-control">
+            </div>
+            <div class="col-md-12">
+              <label>Preço</label>
+              <input type="text" name="price" value="" id="price" class="form-control">
+            </div>
+            <div class="col-md-12 mt-4">
+              <button type="submit" class="btn btn-primary" name="button">Enviar</button>
+            </div>
+        </div>
+      </form>
+      <div class="jumbotron mt-4" id="result-container">
+        <h1>Meu carrinho de compras</h1>
+        <div id="result" class="mt-4"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="js/index.js">
+    </script>
+  </body>
+</html>
