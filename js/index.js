@@ -17,15 +17,13 @@ $(document).ready(function () {
       });
   });
 
-  var cart = sessionStorage.getItem("cart" + i);
+  var cart = sessionStorage.getItem("cart");
   if (cart !== null) {
     cart = JSON.parse(cart);
     console.info("Carrinho 1 produto", cart[0].name);
-    console.info("Carrinho 1 produto", cart[0].price);
     console.info("Carrinho 1 produto", cart[1].name);
-    console.info("Carrinho 1 produto", cart[1].price);
-
     for (var i = 0; i < cart.lenght ; i++) {
-      $("#result").html("</br>");
-  }}
+      $("#result").html(cart[i].name + "</br>");
+  }
+}
 });
