@@ -16,20 +16,31 @@ $(document).ready(function () {
         price: productPrice
       });
   });
-  var productname = ("Produto = ");
-  var productprice = ("Preço = R$ ");
+  var productname = ("Produto");
+  var productprice = ("Preço");
   var cart = sessionStorage.getItem("cart");
   if (cart !== null) {
     cart = JSON.parse(cart);
-    //console.info("Carrinho 1 produto", cart[0].name);
-    //console.info("Carrinho 1 produto", cart[0].price);
+    console.info("Carrinho 1 produto", cart[0].name);
+    console.info("Carrinho 1 produto", cart[0].price);
 
     for (var i = 0; i < cart.length; i++) {
+      //$("#test").html(i);
+      //$("#result").append('<div>' + productname + cart[i].name + ' ' + 
+      //productprice + cart[i].price + "</div>" + 
+      //'<button class="btn btn-primary" onClick="removeToCart(' + i + ')" "id="reset' + i + '" type="reset">Excluir Produto</button>'
+      //+ "</br>")
+
       $("#test").html(i);
-      $("#result").append('<div>' + productname + cart[i].name + ' ' + 
-      productprice + cart[i].price + "</div>" + 
+      $("#result").append('<div class="container">' + '<form class="mt-1"' +
+      '<div class="col-md-6">' + productname + '</div>' +
+      '<input type="text" name="name" value= " '+ cart[i].name +' " id="name" class="form">'
+      +  ' ' + 
+      '<div class="col-md-6">' + productprice + '</div>' +
+      '<input type="text" name="price" "value=" '+ cart[i].price +' " id="price" class="form">' + 
+      '<div class="col-md-12 mt-4">' +
       '<button class="btn btn-primary" onClick="removeToCart(' + i + ')" "id="reset' + i + '" type="reset">Excluir Produto</button>'
-      + "</br>")
+      + '</div>' + '</form>' + '</div>')
     }    
   }
 })
